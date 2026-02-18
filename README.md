@@ -23,8 +23,8 @@ A modern, free, and open-source resume builder with 15+ professional templates. 
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/resume-builder.git
-cd resume-builder
+git clone https://github.com/opensourcekingprojects/resumebuilder.git
+cd resumebuilder
 ```
 
 2. Install dependencies
@@ -97,7 +97,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Project Link: [https://github.com/yourusername/resume-builder](https://github.com/yourusername/resume-builder)
+Project Link: [https://github.com/opensourcekingprojects/resumebuilder](https://github.com/opensourcekingprojects/resumebuilder)
 
 ---
 
