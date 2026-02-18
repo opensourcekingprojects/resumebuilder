@@ -19,7 +19,7 @@ import SplitTemplate from '../components/templates/SplitTemplate';
 import { useResume } from '../context/ResumeContext';
 import Button from '../components/common/Button';
 import * as FiIcons from 'react-icons/fi';
-import SafeIcon from '../common/SafeIcon';
+import SafeIcon from '../components/common/SafeIcon';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { generateWordDocument } from '../utils/wordExport';
