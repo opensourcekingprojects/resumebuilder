@@ -15,6 +15,10 @@
     background-color: #e5e7eb;
     border-radius: 20px;
   }
+
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+  }
 }
 
 body {
