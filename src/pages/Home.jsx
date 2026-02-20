@@ -320,7 +320,7 @@ const Home = () => {
             </div>
             <div className="flex items-center gap-6">
               <a
-                href="https://github.com/yourusername/resume-builder"
+                href="https://github.com/opensourcekingprojects/resumebuilder"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
@@ -329,7 +329,7 @@ const Home = () => {
                 GitHub
               </a>
               <a
-                href="https://github.com/yourusername/resume-builder/issues"
+                href="https://github.com/opensourcekingprojects/resumebuilder"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -337,7 +337,7 @@ const Home = () => {
                 Report Issue
               </a>
               <a
-                href="https://github.com/yourusername/resume-builder/blob/main/LICENSE"
+                href="https://github.com/opensourcekingprojects/resumebuilder?tab=MIT-1-ov-file"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
