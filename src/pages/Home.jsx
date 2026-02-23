@@ -208,22 +208,22 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 -z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 -z-10"></div>
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-8">
               <SafeIcon icon={FiIcons.FiGithub} />
               Open Source Resume Builder
             </div>
-            <h1 className="text-6xl md:text-7xl font-black text-gray-900 mb-6 tracking-tight">
+            <h1 className="text-6xl md:text-7xl font-black text-gray-900 dark:text-white mb-6 tracking-tight">
               Build Your Perfect Resume
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10">
               Free, open-source resume builder with 15+ professional templates. 
               No sign-up required. Export to PDF or Word instantly.
             </p>
@@ -250,7 +250,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -259,13 +259,13 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
                   <SafeIcon icon={feature.icon} className="text-2xl text-blue-600" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -273,11 +273,11 @@ const Home = () => {
       </section>
 
       {/* Templates Section */}
-      <section ref={templatesRef} className="py-24 bg-white">
+      <section ref={templatesRef} className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">15+ Premium Templates</h2>
-            <p className="text-gray-600 text-lg">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">15+ Premium Templates</h2>
+            <p className="text-gray-600 dark:text-gray-300 text-lg">
               Every template is unique. Choose the one that fits your industry.
             </p>
           </div>
@@ -290,7 +290,7 @@ const Home = () => {
                 className="group cursor-pointer"
                 onClick={() => handleTemplateClick(tpl.id)}
               >
-                <div className="aspect-[3/4] bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-4 relative">
+                <div className="aspect-[3/4] bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden mb-4 relative">
                   <MiniPreview type={tpl.id} color={tpl.color} />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="text-white font-bold bg-blue-600 px-4 py-2 rounded-lg">
@@ -298,8 +298,8 @@ const Home = () => {
                     </span>
                   </div>
                 </div>
-                <h3 className="font-bold text-gray-900">{tpl.name}</h3>
-                <p className="text-xs text-gray-500">{tpl.description}</p>
+                <h3 className="font-bold text-gray-900 dark:text-white">{tpl.name}</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400">{tpl.description}</p>
               </motion.div>
             ))}
           </div>

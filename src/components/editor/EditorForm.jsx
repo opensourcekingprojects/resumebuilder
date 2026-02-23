@@ -6,10 +6,10 @@ import Button from '../common/Button';
 import { motion } from 'framer-motion';
 
 const Section = ({ title, icon: Icon, children }) => (
-  <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-6">
-    <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center gap-3">
-      <SafeIcon icon={Icon} className="text-gray-500" />
-      <h3 className="font-semibold text-gray-800">{title}</h3>
+  <div className="bg-white dark:bg-gray-700 rounded-xl shadow-sm border border-gray-200 dark:border-gray-600 overflow-hidden mb-6">
+    <div className="bg-gray-50 dark:bg-gray-600 px-6 py-4 border-b border-gray-200 dark:border-gray-500 flex items-center gap-3">
+      <SafeIcon icon={Icon} className="text-gray-500 dark:text-gray-300" />
+      <h3 className="font-semibold text-gray-800 dark:text-white">{title}</h3>
     </div>
     <div className="p-6">{children}</div>
   </div>
@@ -17,14 +17,14 @@ const Section = ({ title, icon: Icon, children }) => (
 
 const Input = ({ label, value, onChange, type = 'text', className = '' }) => (
   <div className={`flex flex-col gap-1.5 ${className}`}>
-    <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+    <label className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
       {label}
     </label>
     <input
       type={type}
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm"
+      className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-500 dark:bg-gray-600 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm"
     />
   </div>
 );
@@ -32,7 +32,7 @@ const Input = ({ label, value, onChange, type = 'text', className = '' }) => (
 const TextArea = ({ label, value, onChange, rows = 3 }) => (
   <div className="flex flex-col gap-1.5">
     <div className="flex justify-between items-center">
-      <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+      <label className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
         {label}
       </label>
     </div>
@@ -40,7 +40,7 @@ const TextArea = ({ label, value, onChange, rows = 3 }) => (
       value={value}
       onChange={(e) => onChange(e.target.value)}
       rows={rows}
-      className="px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm resize-y"
+      className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-500 dark:bg-gray-600 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm resize-y"
     />
   </div>
 );
@@ -100,8 +100,8 @@ const EditorForm = () => {
               onClick={() => setTemplate(t.id)}
               className={`py-2 px-1 rounded-lg border-2 text-[10px] uppercase font-bold transition-all ${
                 resumeData.template === t.id
-                  ? 'border-blue-500 bg-blue-50 text-blue-700'
-                  : 'border-gray-200 hover:border-gray-300'
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
+                  : 'border-gray-200 dark:border-gray-500 hover:border-gray-300 dark:hover:border-gray-400 dark:text-gray-300'
               }`}
             >
               {t.name}
@@ -110,7 +110,7 @@ const EditorForm = () => {
         </div>
 
         <div>
-          <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-3">
+          <label className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide block mb-3">
             Accent Color
           </label>
           <div className="flex gap-3">

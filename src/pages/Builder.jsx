@@ -19,7 +19,7 @@ import SplitTemplate from '../components/templates/SplitTemplate';
 import { useResume } from '../context/ResumeContext';
 import Button from '../components/common/Button';
 import * as FiIcons from 'react-icons/fi';
-import SafeIcon from '../common/SafeIcon';
+import SafeIcon from '../components/common/SafeIcon';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { generateWordDocument } from '../utils/wordExport';
@@ -104,14 +104,14 @@ const Builder = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex flex-col">
       <Navbar />
 
       <main className="flex-1 max-w-[1920px] mx-auto w-full flex h-[calc(100vh-64px)] overflow-hidden">
         {/* Left Sidebar - Editor */}
-        <div className="w-[450px] bg-white border-r border-gray-200 overflow-y-auto custom-scrollbar">
+        <div className="w-[450px] bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto custom-scrollbar">
           <div className="p-6">
-            <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-6 flex items-center gap-2">
               <SafeIcon icon={FiIcons.FiEdit3} />
               Editor
             </h2>
@@ -120,7 +120,7 @@ const Builder = () => {
         </div>
 
         {/* Right Side - Preview */}
-        <div className="flex-1 bg-gray-100 overflow-y-auto flex flex-col items-center relative">
+        <div className="flex-1 bg-gray-100 dark:bg-gray-900 overflow-y-auto flex flex-col items-center relative">
           {/* Download Button - Fixed Position */}
           <div className="fixed bottom-8 right-8 flex gap-3 z-50">
             <div className="relative">
@@ -138,17 +138,17 @@ const Builder = () => {
               </Button>
 
               {showDownloadMenu && (
-                <div className="absolute bottom-full right-0 mb-2 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden min-w-[180px]">
+                <div className="absolute bottom-full right-0 mb-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden min-w-[180px]">
                   <button
                     onClick={handleDownloadPDF}
-                    className="w-full px-4 py-3 text-left hover:bg-gray-50 flex items-center gap-3 text-sm font-medium text-gray-700 transition-colors"
+                    className="w-full px-4 py-3 text-left hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center gap-3 text-sm font-medium text-gray-700 dark:text-gray-200 transition-colors"
                   >
                     <SafeIcon icon={FiIcons.FiFileText} className="text-red-500" />
                     Download as PDF
                   </button>
                   <button
                     onClick={handleDownloadWord}
-                    className="w-full px-4 py-3 text-left hover:bg-gray-50 flex items-center gap-3 text-sm font-medium text-gray-700 transition-colors border-t border-gray-100"
+                    className="w-full px-4 py-3 text-left hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center gap-3 text-sm font-medium text-gray-700 dark:text-gray-200 transition-colors border-t border-gray-100 dark:border-gray-700"
                   >
                     <SafeIcon icon={FiIcons.FiFile} className="text-blue-500" />
                     Download as Word
