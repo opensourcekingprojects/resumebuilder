@@ -329,7 +329,7 @@ const Home = () => {
                 GitHub
               </a>
               <a
-                href="https://github.com/opensourcekingprojects/resumebuilder"
+                href="https://github.com/opensourcekingprojects/resumebuilder/issues"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -337,7 +337,7 @@ const Home = () => {
                 Report Issue
               </a>
               <a
-                href="https://github.com/opensourcekingprojects/resumebuilder?tab=MIT-1-ov-file"
+                href="https://github.com/opensourcekingprojects/resumebuilder/blob/main/LICENSE"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"

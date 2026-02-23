@@ -52,13 +52,13 @@ Before you begin, ensure you have the following installed:
 
 2. **Clone your fork**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/resume-builder.git
-   cd resume-builder
+   git clone https://github.com/YOUR_USERNAME/resumebuilder.git
+   cd resumebuilder
    ```
 
 3. **Add upstream remote**
    ```bash
-   git remote add upstream https://github.com/ORIGINAL_OWNER/resume-builder.git
+   git remote add upstream https://github.com/opensourcekingprojects/resumebuilder.git
    ```
 
 4. **Install dependencies**
